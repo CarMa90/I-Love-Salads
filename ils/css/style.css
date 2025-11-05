@@ -56,26 +56,6 @@ img {
 
 /* ************* Utilities ************* */
 
-.box-shadow-1 {
-  box-shadow: 4px 4px 5px var(--second-color);
-}
-
-.container {
-  margin: 0 auto;
-  max-width: var(--max-width);
-}
-
-.decoration-none {
-  text-decoration: none;
-}
-
-.d-flex-row-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -92,69 +72,72 @@ img {
 
 /* ************* Site Styles ************* */
 
-.bg-opacity {
-  width: 100%;
-  height: 100%;
-  padding: 0.8rem;
-  border-radius: 1rem;
-  background-color: var(--black-alpha-color);
-}
-
-.card {
-  width: clamp(200px, 35vw, 300px);
-  height: clamp(200px, 35vw, 300px);
-  border-radius: 1rem;
-  /* padding: .5rem; */
-  margin: 1rem;
-  background-image: url(../img/foto-fachada-paseo-la-paz.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.card p {
-  font-size: var(--step-0);
-  font-weight: 500;
-  color: var(--white-color);
-}
-
 .header {
-  position: fixed;
+  position: sticky;
   left: 0;
-  bottom: 0;
+  top: 0;
   z-index: 999;
   padding: 1rem;
   width: 100%;
   height: var(--header-height);
   background-color: var(--first-color);
+  box-shadow: 0 4px 4px var(--second-color);
 }
 
-.header > .container {
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header img {
+.header__logo {
   height: 4rem;
 }
 
 .main {
-  /* background-color: var(--first-alpha-color); */
+  max-width: 1200px;
+  margin: 0 auto;
   min-height: calc(100vh - var(--header-height));
   display: flex;
   flex-wrap: wrap;
+  gap: 3rem;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
 }
 
-@media screen and (min-width: 1024px) {
-  .header {
-    position: sticky;
-    top: 0;
-  }
+.card {
+  text-decoration: none;
+  width: clamp(200px, 35vw, 300px);
+  height: clamp(200px, 35vw, 300px);
+  border-radius: 1rem;
+  background-image: url(../img/foto-fachada-paseo-la-paz.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 4px 4px 4px var(--second-color);
+}
 
-  .header > .container {
+.card__overlay {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  background-color: var(--black-alpha-color);
+  display: flex;
+}
+
+.card__title {
+  text-align: center;
+  margin: auto;
+  font-size: var(--step-0);
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+@media screen and (min-width: 1024px) {
+  .header__container {
     justify-content: flex-start;
   }
 }
