@@ -87,7 +87,7 @@ img {
 .header__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
