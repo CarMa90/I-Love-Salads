@@ -6,6 +6,7 @@
   --second-alpha-color: #3b83f675;
   --third-color: #253746;
   --third-alpha-color: #25374675;
+  --red-color: rgba(243, 39, 53, 1);
   --white-color: #fff;
   --gray-light-color: #f3f3f3;
   --gray-color: #ccc;
@@ -77,9 +78,8 @@ img {
   left: 0;
   top: 0;
   z-index: 999;
-  padding: 1rem;
   width: 100%;
-  height: var(--header-height);
+  /* height: var(--header-height); */
   background-color: var(--first-color);
   box-shadow: 0 4px 4px var(--second-color);
 }
@@ -87,6 +87,7 @@ img {
 .header__container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,6 +95,15 @@ img {
 
 .header__logo {
   height: 4rem;
+}
+
+.header__message {
+  background-color: var(--red-color);
+  color: var(--white-color);
+  font-size: var(--step-1);
+  text-align: center;
+  margin: 0;
+  padding: 8px;
 }
 
 .main {
