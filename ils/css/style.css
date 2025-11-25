@@ -109,7 +109,7 @@ img {
 .main {
   max-width: 1200px;
   margin: 0 auto;
-  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - 150px);
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
