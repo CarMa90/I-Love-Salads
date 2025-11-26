@@ -73,6 +73,12 @@ img {
 
 /* ************* Site Styles ************* */
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   position: sticky;
   left: 0;
@@ -107,9 +113,11 @@ img {
 }
 
 .main {
+  flex-grow: 1;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: calc(100vh - 150px);
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
